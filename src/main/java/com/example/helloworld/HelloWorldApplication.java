@@ -18,6 +18,6 @@ public class HelloWorldApplication {
 class HelloWorldController {
     @GetMapping
     public String hello() {
-        return "Hello, Kubernetes Rolling Update!";
+        return "Hello, World!";
     }
 }

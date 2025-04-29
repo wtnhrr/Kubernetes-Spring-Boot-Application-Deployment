@@ -54,9 +54,6 @@ jobs:
           echo "${{ secrets.KUBECONFIG }}" > kubeconfig
           export KUBECONFIG=kubeconfig
 
-      - name: Validate Kubernetes cluster access
-        run: kubectl cluster-info
-
       - name: Apply Kubernetes manifests
         run: kubectl apply -f k8s.yaml
 

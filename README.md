@@ -21,6 +21,10 @@ Este projeto tem como objetivo demonstrar o **deploy de uma aplicação Java sim
 5. **Rolling Updates**  
    - Atualização da aplicação com uma nova versão, e observação do processo de atualização sem downtime.
 
+6. **Pipeline CI/CD**  
+   - Implementação de um pipeline CI/CD utilizando **GitHub Actions** para automatizar o processo de build, containerização e deploy.  
+   - O pipeline foi configurado como parte do aprendizado em automação de deploys e integração contínua.
+
 ---
 
 ### Para rodar o projeto, você precisa de:

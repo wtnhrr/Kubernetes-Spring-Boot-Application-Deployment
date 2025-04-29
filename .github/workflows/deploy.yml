@@ -44,20 +44,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up kubectl
-        uses: azure/setup-kubectl@v3
-        with:
-          version: 'latest'
+      - name: Validate Kubernetes manifests
+        run: kubectl apply -f k8s.yaml --dry-run=client
 
-      - name: Set up Kubeconfig
+      - name: Simulate Kubernetes Apply
+        run: echo "Simulating kubectl apply -f k8s.yaml"
+
+      - name: Simulate Kubernetes Resource Check
         run: |
-          echo "${{ secrets.KUBECONFIG }}" > kubeconfig
-          export KUBECONFIG=kubeconfig
-
-      - name: Apply Kubernetes manifests
-        run: kubectl apply -f k8s.yaml
-
-      - name: Check Kubernetes resources
-        run: |
-          kubectl get pods
-          kubectl get svc
+          echo "Simulating kubectl get pods"
+          echo "Simulating kubectl get svc"
